@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ccc;
+    margin: 1rem;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+
+#movieGenresList li{
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px;
+}
