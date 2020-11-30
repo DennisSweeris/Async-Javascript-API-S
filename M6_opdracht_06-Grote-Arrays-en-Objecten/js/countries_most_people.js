@@ -2,10 +2,7 @@
 const btnCountriesMostPeople = document.querySelector(".countries_most_people");
 
 // Event listener
-btnCountriesMostPeople.addEventListener("click", () => {
-    generateCountryMostPeopleHTML(displayCountryMostPeople());
-    console.log(`Filtered on country with the most people`);
-});
+btnCountriesMostPeople.addEventListener("click", () => generateCountryMostPeopleHTML(displayCountryMostPeople()));
 
 // Adding to HTML
 const generateCountryMostPeopleHTML = (MostPeople) => {
@@ -17,9 +14,7 @@ const generateCountryMostPeopleHTML = (MostPeople) => {
 };
 
 const displayCountryMostPeople = () => {
-    const countryList = randomPersonData.map((person) => {
-        return person.region;
-    });
+    const countryList = randomPersonData.map((person) => person.region);
     const countries = Array.from(
         countryList.reduce((unique, item) =>
             unique.set(item, (unique.get(item) || 0) + 1), new Map()),

@@ -2,10 +2,7 @@
 const btnCountries = document.querySelector(".countries");
 
 // Event Listener
-btnCountries.addEventListener("click", () => {
-    generateCountryHTML(displayCountries());
-    console.log(`Filtered on country`);
-});
+btnCountries.addEventListener("click", () => generateCountryHTML(displayCountries()))
 
 // Adding to HTML
 const generateCountryHTML = country => {

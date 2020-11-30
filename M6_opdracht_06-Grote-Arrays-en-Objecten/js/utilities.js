@@ -12,7 +12,9 @@ emptyList.forEach(input =>
     input.addEventListener("click", () => {
         emptyResultList();
         emptyButtonList();
-        console.log(`Page was cleared`);
+        if (btnCountries.onclick = () => console.log(`Countries displayed`));
+        if (btnCountriesMostPeople.onclick = () => console.log(`Countries with the most people`));
+
     })
 );
 
