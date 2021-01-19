@@ -1,0 +1,210 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+html {
+  font-size: 62.5%;
+  scrollbar-width: none;
+}
+
+// COLORS
+$backgroundcolor: #8bcee9;
+$textcolor: #f1aa4c;
+$inputcolor: #eeeeee;
+$secondarycolor: #e4c651;
+$hovercolor: #ffffff;
+$bordercolor: #000000;
+$errorcolor: #b43333;
+
+body {
+  background-color: $backgroundcolor;
+  background: url(../img/work.jpg) no-repeat center fixed;
+  background-size: cover;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1 {
+  margin: 2rem;
+  font-size: 8rem;
+  font-family: "Anton", sans-serif;
+  color: $textcolor;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  .input {
+    z-index: 0;
+    width: 50rem;
+    padding: 2rem;
+    background-color: $inputcolor;
+    color: $textcolor;
+    font-size: 5rem;
+    border: 0.5rem solid $bordercolor;
+    border-radius: 2rem 2rem 0 0;
+    outline: none;
+    transition: background-color 200ms ease-in;
+    &::placeholder {
+      color: $textcolor;
+    }
+    &:hover {
+      background-color: $hovercolor;
+    }
+  }
+  .input-btn {
+    z-index: 1;
+    position: relative;
+    right: 2.3rem;
+    height: 4rem;
+    width: 4rem;
+    color: $textcolor;
+    border: 0.5rem solid $bordercolor;
+    border-radius: 1rem;
+    outline: none;
+    cursor: pointer;
+    transition: background-color, transform 200ms ease;
+    &:hover {
+      background-color: $hovercolor;
+      transform: scale(1.1);
+    }
+  }
+}
+
+.todoList-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 25% 0;
+}
+
+.todoList-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.todoList {
+  position: relative;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .todoItems {
+    width: 50rem;
+    display: flex;
+    padding: 2rem;
+    margin-top: -0.5rem;
+    border: 0.5rem solid $bordercolor;
+    background-color: $inputcolor;
+    transition: transform 200ms ease;
+    transform-origin: left;
+    &:first-child {
+      border-radius: 2rem 2rem 0 0;
+    }
+    &:last-child {
+      border-radius: 0 0 2rem 2rem;
+    }
+    &:hover {
+      transform: scaleX(1.05);
+    }
+
+    .item-input {
+      padding: 1.5rem;
+      color: $textcolor;
+      background-color: transparent;
+      border: none;
+      width: 30rem;
+      font-size: 2.5rem;
+    }
+
+    .checkbox {
+      align-self: center;
+      width: 4rem;
+      height: 4rem;
+      cursor: pointer;
+      position: relative;
+      &:hover {
+        outline: none;
+      }
+    }
+
+    .completed {
+      text-decoration: line-through;
+      opacity: 0.5;
+    }
+
+    .edit-todo {
+      text-decoration: underline;
+      color: $errorcolor;
+      outline: none;
+    }
+
+    .edit-btn,
+    .trash-btn {
+      font-size: 2rem;
+      margin: 1.5rem;
+      background: transparent;
+      color: $textcolor;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      transition: transform 200ms ease-in;
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+  }
+}
+
+.select {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+
+  .filter {
+    position: relative;
+    right: -7.75rem;
+    padding: 1rem;
+    width: 15rem;
+    color: $textcolor;
+    font-size: 1.5rem;
+    border: 0.5rem solid $bordercolor;
+    border-top: none;
+    border-radius: 0 0 1rem 1rem;
+    outline: none;
+    background-color: $inputcolor;
+    transition: background-color 200ms ease-in;
+    cursor: pointer;
+    &:hover {
+      background-color: $hovercolor;
+    }
+  }
+}
+
+.date {
+  padding: 1rem;
+  position: relative;
+  left: -11.75rem;
+  color: $textcolor;
+  border: 0.5rem solid $bordercolor;
+  border-top: none;
+  border-radius: 0 0 1rem 1rem;
+  background-color: $inputcolor;
+  font-size: 1.5rem;
+  transition: background-color 200ms ease-in;
+  &:hover {
+    background-color: $hovercolor;
+  }
+}

@@ -1,0 +1,262 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+}
+
+html {
+  font-size: 62.5%;
+  scrollbar-width: none;
+}
+
+body {
+  background-color: #8bcee9;
+  background: url(../img/work.jpg) no-repeat center fixed;
+  background-size: cover;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+h1 {
+  margin: 2rem;
+  font-size: 8rem;
+  font-family: "Anton", sans-serif;
+  color: #f1aa4c;
+}
+
+.input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+.input-container .input {
+  z-index: 0;
+  width: 50rem;
+  padding: 2rem;
+  background-color: #eeeeee;
+  color: #f1aa4c;
+  font-size: 5rem;
+  border: 0.5rem solid #000000;
+  border-radius: 2rem 2rem 0 0;
+  outline: none;
+  -webkit-transition: background-color 200ms ease-in;
+  transition: background-color 200ms ease-in;
+}
+.input-container .input::-webkit-input-placeholder {
+  color: #f1aa4c;
+}
+.input-container .input::-moz-placeholder {
+  color: #f1aa4c;
+}
+.input-container .input:-ms-input-placeholder {
+  color: #f1aa4c;
+}
+.input-container .input::-ms-input-placeholder {
+  color: #f1aa4c;
+}
+.input-container .input::placeholder {
+  color: #f1aa4c;
+}
+.input-container .input:hover {
+  background-color: #ffffff;
+}
+.input-container .input-btn {
+  z-index: 1;
+  position: relative;
+  right: 2.3rem;
+  height: 4rem;
+  width: 4rem;
+  color: #f1aa4c;
+  border: 0.5rem solid #000000;
+  border-radius: 1rem;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: background-color, -webkit-transform 200ms ease;
+  transition: background-color, -webkit-transform 200ms ease;
+  transition: background-color, transform 200ms ease;
+  transition: background-color, transform 200ms ease, -webkit-transform 200ms ease;
+}
+.input-container .input-btn:hover {
+  background-color: #ffffff;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.todoList-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 25% 0;
+}
+
+.todoList-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2rem;
+}
+
+.todoList {
+  position: relative;
+  right: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.todoList .todoItems {
+  width: 50rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2rem;
+  margin-top: -0.5rem;
+  border: 0.5rem solid #000000;
+  background-color: #eeeeee;
+  -webkit-transition: -webkit-transform 200ms ease;
+  transition: -webkit-transform 200ms ease;
+  transition: transform 200ms ease;
+  transition: transform 200ms ease, -webkit-transform 200ms ease;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+.todoList .todoItems:first-child {
+  border-radius: 2rem 2rem 0 0;
+}
+.todoList .todoItems:last-child {
+  border-radius: 0 0 2rem 2rem;
+}
+.todoList .todoItems:hover {
+  -webkit-transform: scaleX(1.05);
+          transform: scaleX(1.05);
+}
+.todoList .todoItems .item-input {
+  padding: 1.5rem;
+  color: #f1aa4c;
+  background-color: transparent;
+  border: none;
+  width: 30rem;
+  font-size: 2.5rem;
+}
+.todoList .todoItems .checkbox {
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  position: relative;
+}
+.todoList .todoItems .checkbox:hover {
+  outline: none;
+}
+.todoList .todoItems .completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.todoList .todoItems .edit-todo {
+  text-decoration: underline;
+  color: #b43333;
+  outline: none;
+}
+.todoList .todoItems .edit-btn,
+.todoList .todoItems .trash-btn {
+  font-size: 2rem;
+  margin: 1.5rem;
+  background: transparent;
+  color: #f1aa4c;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 200ms ease-in;
+  transition: -webkit-transform 200ms ease-in;
+  transition: transform 200ms ease-in;
+  transition: transform 200ms ease-in, -webkit-transform 200ms ease-in;
+}
+.todoList .todoItems .edit-btn:hover,
+.todoList .todoItems .trash-btn:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+}
+.select .filter {
+  position: relative;
+  right: -7.75rem;
+  padding: 1rem;
+  width: 15rem;
+  color: #f1aa4c;
+  font-size: 1.5rem;
+  border: 0.5rem solid #000000;
+  border-top: none;
+  border-radius: 0 0 1rem 1rem;
+  outline: none;
+  background-color: #eeeeee;
+  -webkit-transition: background-color 200ms ease-in;
+  transition: background-color 200ms ease-in;
+  cursor: pointer;
+}
+.select .filter:hover {
+  background-color: #ffffff;
+}
+
+.date {
+  padding: 1rem;
+  position: relative;
+  left: -11.75rem;
+  color: #f1aa4c;
+  border: 0.5rem solid #000000;
+  border-top: none;
+  border-radius: 0 0 1rem 1rem;
+  background-color: #eeeeee;
+  font-size: 1.5rem;
+  -webkit-transition: background-color 200ms ease-in;
+  transition: background-color 200ms ease-in;
+}
+.date:hover {
+  background-color: #ffffff;
+}
