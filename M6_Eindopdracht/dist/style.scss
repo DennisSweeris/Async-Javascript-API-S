@@ -4,12 +4,14 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   text-align: center;
 }
 
 html {
   font-size: 62.5%;
-  scrollbar-width: none;
+  -ms-scrollbar-scrollbar-width: none;
 }
 
 // COLORS
@@ -52,13 +54,15 @@ h1 {
     font-size: 5rem;
     border: 0.5rem solid $bordercolor;
     border-radius: 2rem 2rem 0 0;
-    outline: none;
     transition: background-color 200ms ease-in;
     &::placeholder {
       color: $textcolor;
     }
     &:hover {
       background-color: $hovercolor;
+    }
+    &:focus {
+      outline: none;
     }
   }
   .input-btn {
@@ -70,12 +74,14 @@ h1 {
     color: $textcolor;
     border: 0.5rem solid $bordercolor;
     border-radius: 1rem;
-    outline: none;
     cursor: pointer;
     transition: background-color, transform 200ms ease;
     &:hover {
       background-color: $hovercolor;
       transform: scale(1.1);
+    }
+    &:focus {
+      outline: none;
     }
   }
 }
@@ -119,11 +125,11 @@ h1 {
     }
 
     .item-input {
-      padding: 1.5rem;
+      margin: 1.5rem;
       color: $textcolor;
       background-color: transparent;
       border: none;
-      width: 30rem;
+      width: 28rem;
       font-size: 2.5rem;
     }
 
@@ -133,9 +139,6 @@ h1 {
       height: 4rem;
       cursor: pointer;
       position: relative;
-      &:hover {
-        outline: none;
-      }
     }
 
     .completed {
@@ -146,7 +149,9 @@ h1 {
     .edit-todo {
       text-decoration: underline;
       color: $errorcolor;
-      outline: none;
+      &:focus {
+        outline: none;
+      }
     }
 
     .edit-btn,
@@ -156,11 +161,13 @@ h1 {
       background: transparent;
       color: $textcolor;
       border: none;
-      outline: none;
       cursor: pointer;
       transition: transform 200ms ease-in;
       &:hover {
         transform: scale(1.5);
+      }
+      &:focus {
+        outline: none;
       }
     }
   }
@@ -183,12 +190,14 @@ h1 {
     border: 0.5rem solid $bordercolor;
     border-top: none;
     border-radius: 0 0 1rem 1rem;
-    outline: none;
     background-color: $inputcolor;
     transition: background-color 200ms ease-in;
     cursor: pointer;
     &:hover {
       background-color: $hovercolor;
+    }
+    &:focus {
+      outline: none;
     }
   }
 }

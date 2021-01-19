@@ -3,14 +3,15 @@
 *::before {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   text-align: center;
 }
 
 html {
   font-size: 62.5%;
-  scrollbar-width: none;
+  -ms-scrollbar-scrollbar-width: none;
 }
 
 body {
@@ -58,7 +59,6 @@ h1 {
   font-size: 5rem;
   border: 0.5rem solid #000000;
   border-radius: 2rem 2rem 0 0;
-  outline: none;
   -webkit-transition: background-color 200ms ease-in;
   transition: background-color 200ms ease-in;
 }
@@ -80,6 +80,9 @@ h1 {
 .input-container .input:hover {
   background-color: #ffffff;
 }
+.input-container .input:focus {
+  outline: none;
+}
 .input-container .input-btn {
   z-index: 1;
   position: relative;
@@ -89,7 +92,6 @@ h1 {
   color: #f1aa4c;
   border: 0.5rem solid #000000;
   border-radius: 1rem;
-  outline: none;
   cursor: pointer;
   -webkit-transition: background-color, -webkit-transform 200ms ease;
   transition: background-color, -webkit-transform 200ms ease;
@@ -100,6 +102,9 @@ h1 {
   background-color: #ffffff;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+.input-container .input-btn:focus {
+  outline: none;
 }
 
 .todoList-wrapper {
@@ -166,11 +171,11 @@ h1 {
           transform: scaleX(1.05);
 }
 .todoList .todoItems .item-input {
-  padding: 1.5rem;
+  margin: 1.5rem;
   color: #f1aa4c;
   background-color: transparent;
   border: none;
-  width: 30rem;
+  width: 28rem;
   font-size: 2.5rem;
 }
 .todoList .todoItems .checkbox {
@@ -181,9 +186,6 @@ h1 {
   cursor: pointer;
   position: relative;
 }
-.todoList .todoItems .checkbox:hover {
-  outline: none;
-}
 .todoList .todoItems .completed {
   text-decoration: line-through;
   opacity: 0.5;
@@ -191,6 +193,8 @@ h1 {
 .todoList .todoItems .edit-todo {
   text-decoration: underline;
   color: #b43333;
+}
+.todoList .todoItems .edit-todo:focus {
   outline: none;
 }
 .todoList .todoItems .edit-btn,
@@ -200,7 +204,6 @@ h1 {
   background: transparent;
   color: #f1aa4c;
   border: none;
-  outline: none;
   cursor: pointer;
   -webkit-transition: -webkit-transform 200ms ease-in;
   transition: -webkit-transform 200ms ease-in;
@@ -211,6 +214,10 @@ h1 {
 .todoList .todoItems .trash-btn:hover {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
+}
+.todoList .todoItems .edit-btn:focus,
+.todoList .todoItems .trash-btn:focus {
+  outline: none;
 }
 
 .select {
@@ -234,7 +241,6 @@ h1 {
   border: 0.5rem solid #000000;
   border-top: none;
   border-radius: 0 0 1rem 1rem;
-  outline: none;
   background-color: #eeeeee;
   -webkit-transition: background-color 200ms ease-in;
   transition: background-color 200ms ease-in;
@@ -242,6 +248,9 @@ h1 {
 }
 .select .filter:hover {
   background-color: #ffffff;
+}
+.select .filter:focus {
+  outline: none;
 }
 
 .date {
