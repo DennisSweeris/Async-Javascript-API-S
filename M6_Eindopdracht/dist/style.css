@@ -233,7 +233,7 @@ h1 {
 }
 .select .filter {
   position: relative;
-  right: -7.75rem;
+  right: -7.15rem;
   padding: 1rem;
   width: 15rem;
   color: #f1aa4c;
@@ -256,7 +256,7 @@ h1 {
 .date {
   padding: 1rem;
   position: relative;
-  left: -11.75rem;
+  left: -11rem;
   color: #f1aa4c;
   border: 0.5rem solid #000000;
   border-top: none;
